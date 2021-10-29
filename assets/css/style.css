@@ -1,0 +1,646 @@
+/* Reset css */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+html {
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#wrapper {
+    
+}
+
+.grid{
+    margin: 0px auto;
+    max-width: 1300px;
+}
+
+/* HEADER */
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    transition: all ease 1s;
+    z-index: 1;
+}
+
+
+
+.inner-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.category-header .main-menu,
+.user-header .icon{
+    display: flex;
+}
+
+.category-header .main-menu li a,
+.user-header .icon li a{
+    margin: 0px 10px;
+    color: #fff;
+}
+
+.logo-header .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.category-header .main-menu li a:hover,
+.user-header .icon li a:hover{
+    color: #e1ba39;
+}
+
+
+.js-logo{
+    font-size: 40px;
+}
+
+.sticky{
+    background: #000;
+    padding: 15px 0;
+    animation: showSticky ease 1s;
+}
+
+@keyframes showSticky {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Phụ kiện */
+.category-header .main-menu li a.accessory{
+    position: relative;
+}
+
+.category-accessory{
+    position: absolute;
+    background: #fff;
+    width: 220px;
+    height: 200px;
+    top: 65px;
+    right: 547px;
+    border: 1px solid #e1ba39;
+    border-radius: 10px;
+    animation: show ease-in-out 0.5s;
+    display: none;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.category-accessory::before{
+    position: absolute;
+    content: "";
+    border: 10px solid #e1ba39;
+    border-color: transparent transparent #fff transparent;
+    right: 27px;
+    top: -20px;
+}
+
+.category-header .main-menu .link-accessory:hover .category-accessory{
+    display: block; 
+}
+
+.category-accessory .accessories li a{
+    color: #000;
+
+}
+.category-accessory .accessories {
+    margin: 10px ;
+    
+}
+
+.category-accessory .accessories li{
+    margin: 18px 0; 
+}
+
+
+/* Tìm kiếm */
+.user-header .icon .icon-search .link-icon-search{
+    position: relative;
+}
+
+.show-search {
+    position: absolute;
+    background: #fff;
+    width: 575px;
+    height: 100px;
+    top: 65px;
+    right: 160px;
+    border: 1px solid #e1ba39;
+    border-radius: 10px;
+    animation: show ease-in-out 0.5s;
+    display: none;
+
+}
+
+.show-search::before{
+    position: absolute;
+    content: "";
+    border: 10px solid #e1ba39;
+    border-color: transparent transparent #fff transparent;
+    top: -20px;
+    right: 67px;
+}
+
+
+
+div.input{
+    display: flex;
+    height: 100%;
+}
+
+input.input-text {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 35px;
+    padding: 0 40px 0 20px;
+    border-radius: 20px;
+    border: 0.5px solid #D8D8D8 ;
+    outline: none;
+}
+
+.click-search {
+    color: #000;
+    position: fixed;
+    top: 109px;
+    right: 210px;
+    cursor: pointer;
+}
+
+.user-header .icon .icon-search:hover .show-search{
+    display: block;
+}
+
+/* Tài khoản */
+.user-header .icon .icon-user .link-icon-user{
+    position: relative;
+}
+
+.show-account{
+    position: absolute;
+    background: #fff;
+    width: 120px;
+    height: 80px;
+    top: 65px;
+    right: 144px;
+    border: 1px solid #e1ba39;
+    border-radius: 10px;
+    animation: show ease-in-out 0.5s;
+    display: none;
+}
+
+.show-account::before{
+    position: absolute;
+    content: "";
+    border: 10px solid #e1ba39;
+    border-color: transparent transparent #fff transparent;
+    top: -20px;
+    right: 47px;
+}
+
+.user-header .icon .icon-user:hover .show-account{
+    display: block;
+}
+
+.show-account .account{
+    height: 100%;
+}
+
+.show-account .account li a{
+    color: #000;
+}
+
+.show-account .account li{
+    margin: 12px;
+}
+/* Giỏ hàng */
+.user-header .icon .icon-cart .link-icon-cart{
+    position: relative;
+}
+
+.show-cart{
+    position: absolute;
+    background: #fff;
+    width: 260px;
+    height: 140px;
+    border: 1px solid #e1ba39;
+    border-radius: 10px;
+    top: 65px;
+    right: 150px;
+    animation: show ease-in-out 0.5s;
+    display: none;
+}
+
+.show-cart::before{
+    position: absolute;
+    content: "";
+    border: 10px solid #e1ba39;
+    border-color: transparent transparent #fff transparent;
+    top: -20px;
+    right: 7px;
+}
+
+.user-header .icon .icon-cart:hover .show-cart{
+    display: block;
+}
+
+
+
+/* SLIDER */
+#slider {
+   width: 100%;
+}
+
+#slider img {
+    width: 100%;
+}
+
+/* CONTENT */
+.content{
+
+}
+
+.section-content{
+
+}
+
+.inner-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.name-watch{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.body-item{
+    text-align: center;
+    width: 23%;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+
+
+h6.name {
+    opacity: 0.5;
+}
+
+.detail {
+    margin: 0 0 10px 0;
+}
+
+.detail-name{
+    color: #000;
+}
+
+.detail-name:hover{
+    color: #e1ba39;
+}
+
+h5.price-watch {
+    margin-bottom: 15px;
+}
+
+.body-item:hover {
+    transform: scale(1.1);
+}
+
+/* Slider-content */
+.slider-content{
+    width: 100%;
+    height: 250px;
+    background-image: url(http://mauweb.monamedia.net/dongho/wp-content/uploads/2018/03/movement-gears-background.jpg);
+}
+
+.slider-content ul{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.slider-content ul li{
+    color: #fff;
+    font-size: 25px;
+    line-height: 250px;
+}
+
+.slider-content2 {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.slider-content2 img{
+    width: 50%;
+    display: block;
+    transition: all ease 0.5s;
+}
+
+.slider-content2 img:hover{
+    transform: scale(1.1);
+}
+
+/* Thông tin */
+
+.infomation{
+    display: flex;
+    justify-content: space-around;
+}
+.infomation-body{
+    width: 30%;
+    height: 350px;
+    text-align: center;
+    margin: 70px 0;
+    cursor: pointer;
+    
+}
+.infomation-body .box-img{
+    overflow: hidden;
+}
+.infomation-body .box-img img{
+    width: 100%;
+    height: 215px;
+    display: block;
+    transition: all ease 0.75s;
+}
+
+.infomation-body .box-img img:hover{
+    transform: scale(1.3);
+}
+
+.infomation-body .imfomation-text h4 {
+    font-size: 17px;
+    margin: 5px ;
+}
+
+.infomation-body .imfomation-text p{
+    opacity: 0.5;
+}
+
+/* FOOTER */
+#footer{
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+    display: flex;
+}
+
+.address{
+    position: relative;
+    width: 33.3%;
+}
+
+.address::before{
+    position: absolute;
+    content: "";
+    border-left: 1px dashed #C0C0C0;
+    width: 20px;
+    height: 100%;
+    top: 0px;
+    right: -22px;
+}
+
+
+.address h2{
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.address .footer-map{
+    height: 100%;
+}
+
+
+
+
+.address .footer-map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-email{
+    text-align: center;
+}
+
+.address .footer-logo img {
+    margin: 15px 0;
+    width: 40%;
+}
+.address .footer-email .title,
+.address .footer-email .copy-right{
+    color: #fff;
+}
+
+.email-text input{
+    position: relative;
+    width: 300px;
+    height: 35px;
+    padding: 0 40px;
+    border-radius: 25px;
+    margin: 92px 0;
+    outline: none;
+}
+
+.email-text .btn-send{
+    position: absolute;
+    font-size: 10px;
+    top: 227px;
+    right: 54px;
+    padding: 13px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.email-text .btn-send:hover{
+    background-color: #DAD6D6;
+}
+
+.email-text .btn-send a{
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-contact{
+    width: 33%;
+}
+
+.footer-contact .contact{
+    text-align: center;
+}
+
+.footer-contact .contact h1{
+    color: #fff;
+    font-size: 25px;
+    margin: 30px 0;
+   
+}
+.footer-contact .contact-address{
+   
+}
+
+.footer-contact .contact-address p{
+    color: #fff;
+    opacity: 0.5;
+    margin: 20px 50px;
+}
+.footer-contact{
+    text-align: center;
+}
+
+.footer-contact .icon-social i{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.footer-contact .icon-social i:hover{
+    color: #e2ba48;
+}
+.footer-contact .icon-social a{
+    text-decoration: none;
+}
+
+
+/* Modal / Overlay */
+
+.modal-login{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    
+}
+
+.open-login{
+    display: flex; 
+}
+
+.body-login{
+    width: 60%;
+    height: 400px;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    animation: showLogin ease 1s;
+}
+
+.modal-login .body-login .modal-close{
+    position: absolute;
+    right: 0;
+    margin: 10px;
+}
+
+.modal-login .body-login .modal-close a:hover{
+    opacity: 0.5;
+}
+
+.modal-login .body-login .modal-name{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.modal-login .body-login .modal-text{
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.modal-login .body-login .modal-text h4{
+    margin-bottom: 5px;
+}
+.modal-login .body-login .modal-text .modal-input-text{
+    width: 97%;
+    height: 35px;
+    padding: 0 10px;
+}
+
+.modal-login .body-login .btn-login{
+    display: flex;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.modal-login .body-login .btn-login button{
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-login .body-login .btn-login .input-check{
+    margin: 13px 20px 0 20px;
+}
+
+.modal-login .body-login .btn-login p{
+    margin-top: 10px;
+}
+
+.modal-login .body-login .forgot{
+    padding: 0 20px;
+   
+}
+
+.modal-login .body-login .forgot a{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.modal-login .body-login .forgot a:hover{
+    color: #e1ba39;
+}
+
+@keyframes showLogin{
+    from{
+        transform: translateY(-100px);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
